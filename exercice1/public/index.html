@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    
+    <link href="./output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body class="font-sans bg-gray-100">
+
+    <!-- Section d'en-tête -->
+    <nav class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <h1>BEn Toughorit Iskander</h1>
+               
+               
+                <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div class="flex flex-shrink-0 items-center">
+                <h1 class=" text-xl font-medium text-white">Ben Toughorit Iskander</h1>
+              </div>
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a href="#home" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Accueil</a>
+                  <a href="#skills" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Compétences</a>
+                  <a href="#projects" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projets</a>
+                  <a href="#contact" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pb-3 pt-2">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="#home" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Accueil</a>
+            <a href="#skills" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Compétences</a>
+            <a href="#projects" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+            <a href="#contact" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Section Héros -->
+    <section id="home" class="bg-cover bg-center h-screen" style="background-image: url('../hero.jpg');">
+        <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
+            <div class="text-center text-white">
+                <h2 class="text-4xl md:text-6xl font-bold mb-4">Bienvenue sur mon Portfolio</h2>
+                <p class="text-xl">Je suis un développeur web, passionné par le monde du Développement web</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="skills" class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h3 class="text-3xl font-semibold mb-8">Mes Compétences</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-bold mb-4">HTML/CSS</h4>
+                    <p>Création de sites web modernes et responsifs.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-bold mb-4">JavaScript</h4>
+                    <p>Développement d'applications interactives.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-bold mb-4">Tailwind CSS</h4>
+                    <p>Stylisation rapide et efficace de pages web.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="container mx-auto text-center">
+            <h3 class="text-3xl font-semibold mb-8">Mes Projets</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Projet 1: Portfolio personnel -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <img src="../portfolio.jpeg" alt="Projet 1" class="rounded-lg mb-4">
+                    <h4 class="text-xl font-bold">Portfolio personnel</h4>
+                    <p>Un site web réactif qui présente votre travail, vos compétences et vos projets. Utilise Tailwind CSS et des animations en JavaScript pour améliorer l'expérience utilisateur.</p>
+                </div>
+                <!-- Projet 2: Application de gestion de tâches -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <img src="../gestion.png" alt="Projet 2" class="rounded-lg mb-4">
+                    <h4 class="text-xl font-bold">Application de gestion de tâches (To-Do List)</h4>
+                    <p>Une application web simple permettant aux utilisateurs de gérer des tâches avec tri par priorité. Utilise JavaScript pour la logique et LocalStorage pour la persistance des données.</p>
+                </div>
+                <!-- Projet 3: Mini-blog avec commentaires -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <img src="../blog.png" alt="Projet 3" class="rounded-lg mb-4">
+                    <h4 class="text-xl font-bold">Mini-blog avec commentaires</h4>
+                    <p>Un mini-blog où les utilisateurs peuvent publier des articles et laisser des commentaires. Montre des compétences front-end et back-end léger avec intégration des bases de données.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Formulaire de Contact -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h3 class="text-3xl font-semibold mb-8">Contactez-moi</h3>
+            <form action="#" class="max-w-lg mx-auto">
+                <div class="mb-6">
+                    <input type="text" placeholder="Votre nom" class="w-full p-3 rounded-lg border border-gray-300">
+                </div>ce1
+                <div class="mb-6">
+                    <input type="email" placeholder="Votre adresse email" class="w-full p-3 rounded-lg border border-gray-300">
+                </div>
+                <div class="mb-6">
+                    <textarea placeholder="Votre message" class="w-full p-3 rounded-lg border border-gray-300"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto text-center">
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="#" class="hover:text-blue-500">
+                <i class="fab fa-facebook-f h-6 w-6"></i>
+            </a>
+            <a href="#" class="hover:text-blue-500">
+                <i class="fab fa-twitter h-6 w-6"></i>
+            </a>
+            <a href="#" class="hover:text-blue-500">
+                <i class="fab fa-linkedin-in h-6 w-6"></i>
+            </a>
+        </div>
+        <p>&copy; 2024 Ben Toughorit Iskander. Tous droits réservés.</p>
+    </div>
+</footer>
+
+</body>
+
+</html>
